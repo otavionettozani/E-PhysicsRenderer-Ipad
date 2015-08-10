@@ -9,8 +9,12 @@
 #import "ViewController.h"
 #import "RendererObject.h"
 #import "RendererView.h"
+#import "ServerConnector.h"
 
-@interface ViewController ()
+@interface ViewController ()<ServerConnectorDelegate>
+
+@property(nonatomic) ServerConnector* connector;
+
 
 @end
 
@@ -45,11 +49,25 @@
 	
 	
 	[self.view setNeedsDisplay];
+	
+	
+	self.connector = [[ServerConnector alloc] init];
+	
+	self.connector.delegate = self;
+	
+	
 }
 
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
+}
+
+
+-(void)receivedMessageFromServer:(MessageType)type content:(NSDictionary *)content{
+	
+	
+	
 }
 
 @end

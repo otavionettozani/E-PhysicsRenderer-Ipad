@@ -16,6 +16,7 @@
 		C46A73761B7161030019ADA9 /* ParallellaRendererTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C46A73751B7161030019ADA9 /* ParallellaRendererTests.m */; };
 		C46A73811B71613C0019ADA9 /* RendererObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C46A73801B71613C0019ADA9 /* RendererObject.m */; };
 		C46A73841B7163B50019ADA9 /* RendererView.m in Sources */ = {isa = PBXBuildFile; fileRef = C46A73831B7163B50019ADA9 /* RendererView.m */; };
+		C483744D1B795B5C00C8EAEF /* ServerConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = C483744C1B795B5C00C8EAEF /* ServerConnector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		C46A73801B71613C0019ADA9 /* RendererObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RendererObject.m; sourceTree = "<group>"; };
 		C46A73821B7163B50019ADA9 /* RendererView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RendererView.h; sourceTree = "<group>"; };
 		C46A73831B7163B50019ADA9 /* RendererView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RendererView.m; sourceTree = "<group>"; };
+		C483744B1B795B5C00C8EAEF /* ServerConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerConnector.h; sourceTree = "<group>"; };
+		C483744C1B795B5C00C8EAEF /* ServerConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerConnector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				C46A73801B71613C0019ADA9 /* RendererObject.m */,
 				C46A73821B7163B50019ADA9 /* RendererView.h */,
 				C46A73831B7163B50019ADA9 /* RendererView.m */,
+				C483744B1B795B5C00C8EAEF /* ServerConnector.h */,
+				C483744C1B795B5C00C8EAEF /* ServerConnector.m */,
 				C46A73631B7161030019ADA9 /* Main.storyboard */,
 				C46A73661B7161030019ADA9 /* Images.xcassets */,
 				C46A73681B7161030019ADA9 /* LaunchScreen.xib */,
@@ -230,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46A73621B7161030019ADA9 /* ViewController.m in Sources */,
+				C483744D1B795B5C00C8EAEF /* ServerConnector.m in Sources */,
 				C46A73811B71613C0019ADA9 /* RendererObject.m in Sources */,
 				C46A735F1B7161030019ADA9 /* AppDelegate.m in Sources */,
 				C46A73841B7163B50019ADA9 /* RendererView.m in Sources */,
@@ -430,6 +436,7 @@
 				C46A737B1B7161030019ADA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C46A737C1B7161030019ADA9 /* Build configuration list for PBXNativeTarget "ParallellaRendererTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +445,7 @@
 				C46A737E1B7161030019ADA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
