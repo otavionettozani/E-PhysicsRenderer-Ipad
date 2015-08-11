@@ -17,8 +17,8 @@
 	
 	if(self){
 		self.rotation = [[dictionary objectForKey:@"Rotation"] floatValue];
-		self.position = [(NSValue *)[dictionary objectForKey:@"Position"] CGPointValue];
-		self.rotationPoint = [(NSValue *)[dictionary objectForKey:@"RotationPoint"] CGPointValue];
+		self.position = CGPointMake([dictionary[@"Position"][@"x"] floatValue], [dictionary[@"Position"][@"y"] floatValue]);
+		self.rotationPoint = CGPointMake([dictionary[@"Position"][@"x"] floatValue], [dictionary[@"Position"][@"y"] floatValue]);
 		self.type = (ObjectType)[[dictionary objectForKey:@"Type"] integerValue];
 		switch (self.type) {
 			case TYPE_CIRCLE:

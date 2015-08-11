@@ -176,7 +176,7 @@
 	
 	self.inputBuffer = [[self.inputBuffer subdataWithRange:NSMakeRange(4+dataLength, self.inputBuffer.length-(4+dataLength))] mutableCopy];
 	
-	//[self processData:[jsonObject[@"type"] integerValue] content:jsonObject[@"content"] secure:NO];
+	[self.delegate receivedMessageFromServer:jsonObject];
 	
 }
 

@@ -14,7 +14,7 @@
 - (instancetype)initWithFrame:(CGRect)frame{
 	self = [super initWithFrame:frame];
 	if (self) {
-		self.objects = [[NSMutableDictionary alloc] init];
+		//self.objects = [[NSMutableDictionary alloc] init];
 	}
 	return self;
 }

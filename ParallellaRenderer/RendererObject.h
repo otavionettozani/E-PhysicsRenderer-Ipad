@@ -11,8 +11,8 @@
 #import <UIKit/UIKit.h>
 
 typedef enum objType{
-	TYPE_CIRCLE = 0,
-	TYPE_POLYGON = 1,
+	TYPE_CIRCLE = 1,
+	TYPE_POLYGON = 0,
 }ObjectType;
 
 @interface RendererObject : NSObject

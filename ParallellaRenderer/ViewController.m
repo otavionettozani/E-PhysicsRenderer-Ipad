@@ -22,40 +22,13 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-
-	RendererObject* object = [[RendererObject alloc] init];
-	object.points = [[NSMutableArray alloc] init];
-	object.type = TYPE_POLYGON;
-	object.position = CGPointMake(100, 100);
-	object.rotation = M_PI/3;
-	object.rotationPoint = CGPointMake(1, 1);
-	[object.points addObject:[NSValue valueWithCGPoint:CGPointMake(0, 0)]];
-	[object.points addObject:[NSValue valueWithCGPoint:CGPointMake(0, 40)]];
-	[object.points addObject:[NSValue valueWithCGPoint:CGPointMake(40, 0)]];
-	
-	((RendererView*)self.view).objects = [[NSMutableDictionary alloc] init];
-	
-	[((RendererView*)self.view).objects setObject:object forKey:@"0"];
-	
-	object = [[RendererObject alloc] init];
-	object.type = TYPE_CIRCLE;
-	object.position = CGPointMake(200, 200);
-	object.rotation = M_PI/3;
-	object.rotationPoint = CGPointMake(100, 100);
-	object.radius = 30;
-
-	
-	[((RendererView*)self.view).objects setObject:object forKey:@"1"];
-	
-	
-	[self.view setNeedsDisplay];
 	
 	
 	self.connector = [[ServerConnector alloc] init];
 	
 	self.connector.delegate = self;
 	
-	
+	((RendererView*)self.view).objects = [[NSMutableDictionary alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,9 +37,23 @@
 }
 
 
--(void)receivedMessageFromServer:(MessageType)type content:(NSDictionary *)content{
+-(void)receivedMessageFromServer:(NSDictionary *)content{
 	
+	if(content[@"Type"]){
+		//is a new object
+		
+		RendererObject* object = [[RendererObject alloc] initWithDictionary:content];
+		[((RendererView*)self.view).objects setValue:object forKey:content[@"ID"]];
+		
+		
+	}else{
+		//just an update of an old object
+		
+		
+		
+	}
 	
+	[self.view setNeedsDisplay];
 	
 }
 

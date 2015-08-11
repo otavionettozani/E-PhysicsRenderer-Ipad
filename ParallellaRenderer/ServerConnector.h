@@ -18,7 +18,7 @@ typedef enum {
 @protocol ServerConnectorDelegate <NSObject>
 
 
--(void)receivedMessageFromServer:(MessageType)type content:(NSDictionary*)content;
+-(void)receivedMessageFromServer:(NSDictionary*)content;
 
 
 @end
