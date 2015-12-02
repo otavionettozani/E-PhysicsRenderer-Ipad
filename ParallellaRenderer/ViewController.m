@@ -48,7 +48,9 @@
 		
 	}else{
 		//just an update of an old object
-		
+		RendererObject* obj = [((RendererView*)self.view).objects objectForKey:content[@"ID"]];
+		obj.rotation = [content[@"Rotation"] floatValue];
+		obj.position = CGPointMake([content[@"Position"][@"x"] floatValue], [content[@"Position"][@"y"] floatValue]);
 		
 		
 	}

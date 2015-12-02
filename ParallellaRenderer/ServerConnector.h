@@ -1,5 +1,5 @@
 //
-//  SplendensServerConnector.h
+//  ServerConnector.h
 //  ServerConnector
 //
 //  Created by Otávio Netto Zani on 19/01/15.
@@ -12,7 +12,7 @@
 
 //do not use negative numbers to your own messages
 typedef enum {
-	MESSAGE_TYPE_CONNECTED = -1,	
+	MESSAGE_TYPE_CONNECTED = -1,
 } MessageType;
 
 @protocol ServerConnectorDelegate <NSObject>
@@ -23,7 +23,7 @@ typedef enum {
 
 @end
 
-//init will automatically connect with server DEFAULT_HOST_NAME:DEFAULT_PORT_SPLENDENS
+//init will automatically connect with server DEFAULT_HOST_NAME:DEFAULT_PORT
 
 @interface ServerConnector : NSObject
 

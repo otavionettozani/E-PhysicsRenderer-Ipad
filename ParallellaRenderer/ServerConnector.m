@@ -148,8 +148,6 @@
 	
 	
 	//process the data
-	
-	
 	if(self.inputBuffer.length<4){
 		return;
 	}
